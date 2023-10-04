@@ -21,6 +21,7 @@ class Store extends Model
         'phone',
         'hours',
         'active',
+        'services',
     ];
 
     public function user()
@@ -31,10 +32,5 @@ class Store extends Model
     public function address()
     {
         return $this->hasOne(Address::class);
-    }
-
-    public function services()
-    {
-        return $this->belongsToMany(Service::class);
     }
 }
